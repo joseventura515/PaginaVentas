@@ -29,8 +29,10 @@ export class InformacionService {
     this.http.get("https://ventas-59938.firebaseio.com/Productos.json")
               .subscribe( data=>{
                 //console.log(data.json());
+                setTimeout( () => {
                 this.cargada_productos=true;
                 this.producto=data.json();
+                } ,1500)
               })
   }
 }

@@ -1,0 +1,21 @@
+import { Component, OnInit } from '@angular/core';
+import {InformacionService} from "../../services/informacion.service";
+import { ActivatedRoute } from "@angular/router";
+
+
+@Component({
+  selector: 'app-producto',
+  templateUrl: './Login.component.html',
+  styles: []
+})
+export class LoginComponent  {
+
+  constructor(private route:ActivatedRoute ,public _is:InformacionService)
+  {
+    route.params.subscribe( parametros =>{
+      console.log(parametros);
+      console.log(parametros['nombre']);
+    })
+   }
+
+}
