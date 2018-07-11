@@ -28,7 +28,7 @@ export class InformacionService {
   {
     this.http.get("https://ventas-59938.firebaseio.com/Productos.json")
               .subscribe( data=>{
-                console.log(data.json());
+                //console.log(data.json());
                 this.cargada_productos=true;
                 this.producto=data.json();
               })
