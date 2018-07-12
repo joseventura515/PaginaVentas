@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {InformacionService} from "../../services/informacion.service";
-
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -9,8 +9,12 @@ import {InformacionService} from "../../services/informacion.service";
 
 })
 export class PortafolioComponent  {
+  logg='';
+  constructor(public _is:InformacionService
+            ,
+            router:Router) { }
 
-  constructor(public _is:InformacionService) { }
-
-
+  guardar(termino:string) {
+      console.log(termino);
+  }
 }
