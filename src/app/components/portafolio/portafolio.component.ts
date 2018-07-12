@@ -9,12 +9,12 @@ import {Router} from "@angular/router";
 
 })
 export class PortafolioComponent  {
-  logg='';
+
   constructor(public _is:InformacionService
             ,
             router:Router) { }
 
   guardar(termino:string) {
-      console.log(termino);
+      //console.log(termino);
   }
 }

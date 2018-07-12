@@ -32,14 +32,14 @@
 
 
 
-    <div style="float:left;" *ngIf="_is.producto.length > 0 && !cargada_productos"
+    <div style="float:left;" *ngIf="_is.producto.length > 0 "
         class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4 animated fadeIn">
 
 
       <a *ngFor="let p of _is.producto" class="rk-item ae-masonry__item animated fadeIn">
         <img [src] = "p.url" alt="">
         <div class="item-meta" class="item-meta">
-          <button (click)="guardar(log=log+ p.nombre+'\n')">{{p.nombre}}</button>
+          <button >{{p.nombre}}</button>
         </div>
       </a>
     </div>
@@ -47,5 +47,5 @@
 </section>
 <section style="background-color:white;float:right;display:block;padding:10px;">
             CARRITO
- <pre style="background-color:inherit;">{{log}}</pre>
+ <pre style="background-color:inherit;"></pre>
 </section>
